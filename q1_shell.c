@@ -2,12 +2,12 @@
 
 
 /**
- * one_arg_xcute -  a simple shell that collects one argument
+ * main -  a simple shell that collects one argument
  *
  * Return: Nothing
  */
 
-int one_arg_xcute(void)
+int main(void)
 {
 char *kdbuff = NULL;
 size_t kdbuff_size = 0;
@@ -48,7 +48,6 @@ wait(&status);
 }
 i = 0;
 free(args); }
-return (0);
-}
 
 }
+
