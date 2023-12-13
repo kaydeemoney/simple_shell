@@ -21,4 +21,6 @@
 /* q1_shell.c */
 int one_arg_xcute(void);
 
+/* q2_shell.c */
+int two_args_xcute(void);
 #endif

@@ -1,16 +1,12 @@
 #include "yukd_shell.h"
 
-
-/**                                                                                                                                                                                                              \
-                                                                                                                                                                                                                  
- * main -  a simple shell that collects two argument                                                                                                                                                             \
-                                                                                                                                                                                                                  
- *                                                                                                                                                                                                               \
-                                                                                                                                                                                                                  
- * Return : nothing, it is to be looped                                                                                                                                                                          \
-                                                                                                                                                                                                                  
+/**
+ * two_args_xcute -  a simple shell that collects one argument
+ *
+ * Return: Nothing
  */
-int main(void)
+
+int two_args_xcute(void)
 {
 char *kdbuff = NULL;
 size_t kdbuff_size = 0;

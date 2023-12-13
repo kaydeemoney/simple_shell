@@ -1,10 +1,10 @@
 #include "yukd_shell.h"
 
 
-/**                                                                                                                                                                                                               
- * one_arg_xcute -  a simple shell that collects one argument                                                                                                                                                     
- *                                                                                                                                                                                                                
- * Return : nothing, it is to be looped                                                                                                                                                                           
+/**
+ * one_arg_xcute -  a simple shell that collects one argument
+ *
+ * Return: Nothing
  */
 
 int one_arg_xcute(void)
@@ -47,7 +47,7 @@ else
 wait(&status);
 }
 i = 0;
-free(args);}
+free(args); }
 return (0);
 }
 
