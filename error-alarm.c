@@ -96,8 +96,8 @@ int print_d(int input, int kkc)
 	int i, count = 0;
 	unsigned int _abs_, current;
 
-	if(kkc == STDERR_FILENO)
-		__putchar =_yuputchar;
+	if (kkc == STDERR_FILENO)
+		__putchar = _yuputchar;
 	if (input < 0)
 	{
 		_abs_ = -input;

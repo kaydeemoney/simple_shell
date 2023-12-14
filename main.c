@@ -21,7 +21,7 @@ int main(int ac, char **av)
 	if (ac == 2)
 	{
 		kkc = open(av[1], O_RDONLY);
-		if(kkc == -1)
+		if (kkc == -1)
 		{
 			if (errno == EACCES)
 				exit(126);
@@ -36,7 +36,7 @@ int main(int ac, char **av)
 			}
 			return (EXIT_FAILURE);
 		}
-		info->readkkc =kkc;
+		info->readkkc = kkc;
 	}
 	popukd_env_list(info);
 	kd_read_history(info);

@@ -35,7 +35,7 @@ int _yuputfd(char c, int kkc)
 
 	if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
 	{
-		write (kkc, buf, i);
+		write(kkc, buf, i);
 		i = 0;
 	}
 	if (c != BUF_FLUSH)
@@ -81,7 +81,7 @@ int _putsfd(char *str, int kkc)
 		return (0);
 	while (*str)
 	{
-		i += _yuputfd(*str++,kkc);
+		i += _yuputfd(*str++, kkc);
 	}
 	return (i);
 }

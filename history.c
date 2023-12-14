@@ -41,15 +41,15 @@ int write_history(info_t *info)
 
 	kkc = open(filename, O_CREAT | O_TRUNC | O_RDWR, 0644);
 	free(filename);
-	if(kkc == -1)
+	if (kkc == -1)
 		return (-1);
 	for (node = info->history; node; node = node->next)
 	{
-		_putsfd(node->str,kkc);
-		_yuputfd('\n',kkc);
+		_putsfd(node->str, kkc);
+		_yuputfd('\n', kkc);
 	}
-	_yuputfd(BUF_FLUSH,kkc);
-	close (kkc);
+	_yuputfd(BUF_FLUSH, kkc);
+	close(kkc);
 	return (1);
 }
 
@@ -71,20 +71,20 @@ int kd_read_history(info_t *info)
 
 	kkc = open(filename, O_RDONLY);
 	free(filename);
-	if(kkc == -1)
+	if (kkc == -1)
 		return (0);
-	if (!fstat (kkc, &st))
+	if (!fstat(kkc, &st))
 		fsize = st.st_size;
 	if (fsize < 2)
 		return (0);
 	buf = malloc(sizeof(char) * (fsize + 1));
 	if (!buf)
 		return (0);
-	rdlen = read (kkc, buf, fsize);
+	rdlen = read(kkc, buf, fsize);
 	buf[fsize] = 0;
 	if (rdlen <= 0)
 		return (free(buf), 0);
-	close (kkc);
+	close(kkc);
 	for (i = 0; i < fsize; i++)
 		if (buf[i] == '\n')
 		{
