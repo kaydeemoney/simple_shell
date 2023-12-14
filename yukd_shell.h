@@ -147,10 +147,10 @@ int replace_string(char **, char *);
 int loophsh(char **);
 
 
-void_yuputs(char *);
-int_yuputchar(char);
-int _yuputfd(char c, intkkc);
-int _putsfd(char *str, intkkc);
+void _yuputs(char *);
+int _yuputchar(char);
+int _yuputfd(char c, int kkc);
+int _putsfd(char *str, int kkc);
 
 
 int _strlen(char *);

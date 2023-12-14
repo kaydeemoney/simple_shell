@@ -6,7 +6,7 @@
  *
  * Return: Nothing
  */
-void_yuputs(char *str)
+void _yuputs(char *str)
 {
 	int i = 0;
 
@@ -28,7 +28,7 @@ void_yuputs(char *str)
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _yuputfd(char c, intkkc)
+int _yuputfd(char c, int kkc)
 {
 	static int i;
 	static char buf[WRITE_BUF_SIZE];
@@ -51,7 +51,7 @@ int _yuputfd(char c, intkkc)
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int_yuputchar(char c)
+int _yuputchar(char c)
 {
 	static int i;
 	static char buf[WRITE_BUF_SIZE];
@@ -73,7 +73,7 @@ int_yuputchar(char c)
  *
  * Return: the number of chars put
  */
-int _putsfd(char *str, intkkc)
+int _putsfd(char *str, int kkc)
 {
 	int i = 0;
 

@@ -90,7 +90,7 @@ void print_error(info_t *info, char *estr)
  *
  * Return: number of characters printed
  */
-int print_d(int input, intkkc)
+int print_d(int input, int kkc)
 {
 	int (*__putchar)(char) = _putchar;
 	int i, count = 0;

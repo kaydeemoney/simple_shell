@@ -32,7 +32,7 @@ char *get_history_file(info_t *info)
  */
 int write_history(info_t *info)
 {
-	ssize_tkkc;
+	ssize_t kkc;
 	char *filename = get_history_file(info);
 	list_t *node = NULL;
 
@@ -62,7 +62,7 @@ int write_history(info_t *info)
 int kd_read_history(info_t *info)
 {
 	int i, last = 0, linecount = 0;
-	ssize_tkkc, rdlen, fsize = 0;
+	ssize_t kkc, rdlen, fsize = 0;
 	struct stat st;
 	char *buf = NULL, *filename = get_history_file(info);
 

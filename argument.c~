@@ -1,0 +1,55 @@
+#include "shell.h"
+
+/**
+ * no_argument -  a simple shell that collects one argument
+ * @args: argument vector array
+ * one_argument - a simple shell that collects two argument
+ * Return : nothing, it is to be looped
+ */
+int no_argument(char *args[])
+{
+proc_id = fork();
+if (proc_id == -1)
+{
+perror("fork");
+exit(EXIT_FAILURE);
+}
+else if (proc_id == 0)
+{
+if (execve(args[0], args, NULL) == -1)
+{
+perror("error with execution");
+exit(EXIT_FAILURE); }
+}
+else
+{
+wait(&status);
+}
+i = 0;
+free(args);
+}
+
+int one_argument(char *args[])
+{
+proc_id = fork();
+if (proc_id == -1)
+{
+perror("fork");
+exit(EXIT_FAILURE);
+}
+else if (proc_id == 0)
+{
+if (execve(args[0], args, NULL) == -1)
+{
+perror("error with execution");
+exit(EXIT_FAILURE); }
+}
+else
+{
+wait(&status);
+}
+i = 0;
+free(args);
+}
+
+
